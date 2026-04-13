@@ -1,14 +1,6 @@
 import { defineConfig, devices } from '@playwright/test';
 
 /**
- * Read environment variables from file.
- * https://github.com/motdotla/dotenv
- */
-// import dotenv from 'dotenv';
-// import path from 'path';
-// dotenv.config({ path: path.resolve(__dirname, '.env') });
-
-/**
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
@@ -24,7 +16,7 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
-    ['github'], // Adds "Annotations" to your Pull Request
+    ['github'], // Adds "Annotations" to Pull Request
     ['html', { 
       outputFolder: 'report',
       cleanOutputPath: true,

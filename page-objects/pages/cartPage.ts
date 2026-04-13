@@ -57,6 +57,7 @@ export class CartPage extends BasePage {
 
   /** Update cart and wait till success message is visible. */
   async updateCart(){
+    await expect(this.updateCart_Button).toBeVisible();
     await this.updateCart_Button.click();
     await expect(this.cartSuccessfullyUpdated_Msg).toBeVisible();
   };
