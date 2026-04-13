@@ -1,0 +1,20 @@
+{
+  "name": "playwright-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:smoke": "npx playwright test --grep \"@smoke\" --project=chromium",
+    "test:regression": "npx playwright test --grep \"@regression\" --project=chromium",
+    "test:all": "npx playwright test --project=chromium",
+    "test:all-firefox": "npx playwright test --project=firefox"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^25.5.2"
+  }
+}
