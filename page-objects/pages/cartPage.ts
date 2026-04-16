@@ -59,6 +59,6 @@ export class CartPage extends BasePage {
   async updateCart(){
     await expect(this.updateCart_Button).toBeVisible();
     await this.updateCart_Button.click();
-    await expect(this.cartSuccessfullyUpdated_Msg).toBeVisible();
+    await expect(this.cartSuccessfullyUpdated_Msg).toBeVisible();  //From the interview: not the best solution, as msg is always displayed. Alternative: expect [Update cart] button to be disabled
   };
 };
